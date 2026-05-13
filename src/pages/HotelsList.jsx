@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-
+import { Link } from "react-router-dom"
 
 export default function HotelsList() {
     const [hotels, setHotels] = useState([])
@@ -12,6 +12,7 @@ export default function HotelsList() {
 
   return (
     <>
+
         <div className="row g-4">
             {hotels.map((hotel, index) => (
                     <div key={index} className="col-12 col-sm-6 col-md-4 col-lg-3 h-100">
