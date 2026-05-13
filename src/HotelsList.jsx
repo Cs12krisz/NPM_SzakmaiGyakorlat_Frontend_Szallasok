@@ -21,7 +21,7 @@ export default function HotelsList() {
                                 <h5 className="card-title">{hotel.name}</h5>
                                 <p className="card-text">Helye: {hotel.location}</p>
                                 <p className="card-text">Ára: {hotel.price}</p>
-                                <a href="#" className="btn btn-primary">Go somewhere</a>
+                                <a href={`/hotel/${hotel.id}`} className="btn btn-primary">Több adat</a>
                             </div>
                         </div>
                     </div>
