@@ -1,6 +1,3 @@
-import React from 'react'
-import { data } from 'react-router-dom'
-
 export default function NewHotel() {
     const submitEvent = (e) => {
         e.preventDefault()
@@ -16,11 +13,15 @@ export default function NewHotel() {
         const ujHotelJson = JSON.stringify(ujHotel)
 
         fetch("https://nodejs.sulla.hu/data", {
+            headers: {
+                "Content-Type": "application/json"
+            },
             method: "POST",
             body: ujHotelJson
         })
         .then((resp) => resp.json())
-        .then((data) => alert(data.name))
+        .then(() => alert("Sikeres feltöltés!"))
+        .then(() => window.location.assign("/"))
     }
 
 
